@@ -1,0 +1,26 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 3000:3000
+    volumes:
+      - ./config:/app/config # Make sure your local config directory exists
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations, see alternative methods
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: raspberrypi.local:3000,192.168.0.20:3000 # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+      PUID: $PUID
+      PGID: $PGID
+      HOMEPAGE_VAR_USERNAME: $HOMEPAGE_VAR_USERNAME
+      HOMEPAGE_VAR_PASSWORD: $HOMEPAGE_VAR_PASSWORD
+      HOMEPAGE_VAR_USERNAME_WIREGUARD: $HOMEPAGE_VAR_USERNAME_WIREGUARD
+      HOMEPAGE_VAR_PASSWORD_WIREGUARD: $HOMEPAGE_VAR_PASSWORD_WIREGUARD
+      HOMEPAGE_VAR_KEY_PORTAINER: $HOMEPAGE_VAR_KEY_PORTAINER
+      HOMEPAGE_VAR_KEY_PIHOLE: $HOMEPAGE_VAR_KEY_PIHOLE
+      HOMEPAGE_VAR_KEY_PLEX: $HOMEPAGE_VAR_KEY_PLEX
+    networks:
+      - caddy_reverse_proxy_network
+
+networks:
+  caddy_reverse_proxy_network:
+    external: true

@@ -1,0 +1,24 @@
+services:
+  caddy:
+    image: caddy:2
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+#      - "443:443/udp"
+    volumes:
+      - ./conf:/etc/caddy
+      - ./site:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - caddy_reverse_proxy_network
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  caddy_reverse_proxy_network:
+    external: true

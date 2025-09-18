@@ -1,0 +1,11 @@
+.env
+*.log
+
+# pihole
+pihole/etc-pihole/
+
+# plex
+plex/library/
+
+# qbittorrent
+qbittorrent/appdata/

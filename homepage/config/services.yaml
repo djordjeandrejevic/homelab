@@ -1,0 +1,59 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Containers:
+    - Portainer:
+        href: https://raspberrypi.local:9443
+        description: obzerve dem containerz
+        icon: portainer.svg
+        widget:
+          type: portainer
+          url: https://192.168.0.20:9443
+          env: 3
+          kubernetes: false
+          key: {{HOMEPAGE_VAR_KEY_PORTAINER}}
+
+- Network:
+    - Pi-Hole:
+        href: http://raspberrypi.local:80/admin
+        description: block dem adz
+        icon: pi-hole.svg
+        widget:
+          type: pihole
+          url: http://192.168.0.20
+          version: 6
+          key: {{HOMEPAGE_VAR_KEY_PIHOLE}}
+    - Wireguard:
+        href: http://raspberrypi.local:51821
+        description: tunnel dem trafficz
+        icon: wireguard.svg
+        widget:
+          type: wgeasy
+          url: http://192.168.0.20:51821
+          version: 2
+          username: {{HOMEPAGE_VAR_USERNAME_WIREGUARD}}
+          password: {{HOMEPAGE_VAR_PASSWORD_WIREGUARD}}
+          threshold: 2 # optional
+
+- Media:
+    - Plex:
+        href: http://raspberrypi.local:32400
+        description: watch dem moviez & tvshowz
+        icon: plex.png
+        widget:
+          type: plex
+          url: http://192.168.0.20:32400
+          key: {{HOMEPAGE_VAR_KEY_PLEX}}
+
+- Download:
+    - qBittorrent:
+        href: http://raspberrypi.local:8080
+        description: download dem torrentz
+        icon: qbittorrent.svg
+        container: qbittorrent
+        widget:
+          type: qbittorrent
+          url: http://192.168.0.20:8080
+          username: {{HOMEPAGE_VAR_USERNAME}}
+          password: {{HOMEPAGE_VAR_PASSWORD}}
