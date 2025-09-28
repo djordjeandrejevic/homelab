@@ -1,15 +1,15 @@
-pihole.rpi {
-    reverse_proxy 192.168.0.20:80
+http://pihole.rpi {
+    reverse_proxy 192.168.0.9:80
 }
 
-qittorrent.rpi {
+http://qittorrent.rpi {
     reverse_proxy 192.168.0.20:8080
 }
 
-plex.rpi {
+http://plex.rpi {
     reverse_proxy 192.168.0.20:32400
 }
 
-homepage.rpi {
+http://homepage.rpi {
     reverse_proxy 192.168.0.20:3000
 }

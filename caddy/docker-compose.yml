@@ -12,13 +12,7 @@ services:
       - ./site:/srv
       - caddy_data:/data
       - caddy_config:/config
-    networks:
-      - caddy_reverse_proxy_network
 
 volumes:
   caddy_data:
   caddy_config:
-
-networks:
-  caddy_reverse_proxy_network:
-    external: true
