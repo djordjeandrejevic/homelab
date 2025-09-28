@@ -2,7 +2,7 @@
 services:
   pihole:
     container_name: pihole
-    network_mode: host
+#    network_mode: host
     image: pihole/pihole:latest
     ports:
       # DNS Ports
@@ -25,6 +25,7 @@ services:
       # If using Docker's default `bridge` network setting the dns listening mode should be set to 'all'
 #      FTLCONF_dns_listeningMode: 'all'
       FTLCONF_misc_etc_dnsmasq_d: 'true'
+      PIHOLE_IPV4_ADDRESS: 192.168.0.9
     # Volumes store your data between container upgrades
     volumes:
       # For persisting Pi-hole's databases and common configuration file
@@ -39,4 +40,12 @@ services:
       - SYS_TIME
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
+    networks:
+      pihole_macvlan:
+        ipv4_address: 192.168.0.9
     restart: unless-stopped
+
+networks:
+  pihole_macvlan:
+    external: true
+
