@@ -4,7 +4,7 @@
 
 - Containers:
     - Portainer:
-        href: https://portainer.rpi
+        href: http://portainer.rpi
         description: obzerve dem containerz
         icon: portainer.svg
         widget:

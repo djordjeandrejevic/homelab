@@ -17,3 +17,7 @@ http://homepage.rpi {
 http://wireguard.rpi {
     reverse_proxy 192.168.0.20:51821
 }
+
+http://portainer.rpi {
+    reverse_proxy 192.168.0.20:9000
+}

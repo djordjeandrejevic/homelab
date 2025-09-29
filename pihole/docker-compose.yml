@@ -2,7 +2,6 @@
 services:
   pihole:
     container_name: pihole
-#    network_mode: host
     image: pihole/pihole:latest
     ports:
       # DNS Ports
