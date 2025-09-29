@@ -2,7 +2,7 @@ http://pihole.rpi {
     reverse_proxy 192.168.0.9:80
 }
 
-http://qittorrent.rpi {
+http://qbittorrent.rpi {
     reverse_proxy 192.168.0.20:8080
 }
 
@@ -12,4 +12,8 @@ http://plex.rpi {
 
 http://homepage.rpi {
     reverse_proxy 192.168.0.20:3000
+}
+
+http://wireguard.rpi {
+    reverse_proxy 192.168.0.20:51821
 }
