@@ -1,23 +1,27 @@
-http://pihole.rpi {
+{
+    local_certs
+}
+
+https://pihole.rpi {
     reverse_proxy 192.168.0.9:80
 }
 
-http://qbittorrent.rpi {
+https://qbittorrent.rpi {
     reverse_proxy 192.168.0.20:8080
 }
 
-http://plex.rpi {
+https://plex.rpi {
     reverse_proxy 192.168.0.20:32400
 }
 
-http://homepage.rpi {
+https://homepage.rpi {
     reverse_proxy 192.168.0.20:3000
 }
 
-http://wireguard.rpi {
+https://wireguard.rpi {
     reverse_proxy 192.168.0.20:51821
 }
 
-http://portainer.rpi {
+https://portainer.rpi {
     reverse_proxy 192.168.0.20:9000
 }
