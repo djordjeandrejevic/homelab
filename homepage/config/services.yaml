@@ -4,7 +4,7 @@
 
 - Containers:
     - Portainer:
-        href: http://portainer.rpi
+        href: https://portainer.rpi
         description: obzerve dem containerz
         icon: portainer.svg
         widget:
@@ -16,7 +16,7 @@
 
 - Network:
     - Pi-Hole:
-        href: http://pihole.rpi/admin
+        href: https://pihole.rpi/admin
         description: block dem adz
         icon: pi-hole.svg
         widget:
@@ -25,7 +25,7 @@
           version: 6
           key: {{HOMEPAGE_VAR_KEY_PIHOLE}}
     - Wireguard:
-        href: http://wireguard.rpi
+        href: https://wireguard.rpi
         description: tunnel dem trafficz
         icon: wireguard.svg
         widget:
@@ -38,7 +38,7 @@
 
 - Media:
     - Plex:
-        href: http://plex.rpi
+        href: https://plex.rpi
         description: watch dem moviez & tvshowz
         icon: plex.png
         widget:
@@ -48,7 +48,7 @@
 
 - Download:
     - qBittorrent:
-        href: http://qbittorrent.rpi
+        href: https://qbittorrent.rpi
         description: download dem torrentz
         icon: qbittorrent.svg
         container: qbittorrent
