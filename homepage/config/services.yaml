@@ -46,6 +46,12 @@
           url: http://192.168.0.20:32400
           key: {{HOMEPAGE_VAR_KEY_PLEX}}
 
+- IoT:
+    - Home Assistant:
+        href: http://192.168.0.20:8123
+        description: smart dem homez
+        icon: home-assistant-alt.svg
+
 - Download:
     - qBittorrent:
         href: https://qbittorrent.rpi
