@@ -9,3 +9,6 @@ plex/library/
 
 # qbittorrent
 qbittorrent/appdata/
+
+# homeassistant
+homeassistant/config
