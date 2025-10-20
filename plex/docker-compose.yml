@@ -12,7 +12,6 @@ services:
       - PLEX_CLAIM= #optional
     volumes:
       - ~/apps/plex/library:/config
-      - /media/rpi/rpistorage/plex/tvseries:/tv
       - /media/rpi/rpistorage/plex/movies:/movies
-      - /media/rpi/rpistorage/torrent:/torrent
+      - /media/rpi/rpistorage/plex/tvshows:/tv
     restart: unless-stopped

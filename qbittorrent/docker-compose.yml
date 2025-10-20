@@ -11,7 +11,9 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - ~/apps/qbittorrent/appdata:/config
-      - /media/rpi/rpistorage/torrent:/downloads
+      - /media/rpi/rpistorage/downloads:/downloads
+      - /media/rpi/rpistorage/plex/movies:/movies
+      - /media/rpi/rpistorage/plex/tvshows:/tvshows
     ports:
       - 8080:8080
       - 6881:6881
