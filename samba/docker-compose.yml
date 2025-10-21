@@ -9,5 +9,5 @@ services:
     ports:
       - 445:445
     volumes:
-      - /media/rpi/rpistorage/samba:/storage
+      - /media/rpi/hitachi/samba:/storage
     restart: always
