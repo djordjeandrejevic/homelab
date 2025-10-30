@@ -5,7 +5,9 @@
 - resources:
     cpu: true
     memory: true
-    disk: /
+    disk:
+      - /
+      - /hitachi
 
 - search:
     provider: duckduckgo
