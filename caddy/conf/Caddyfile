@@ -25,3 +25,7 @@ https://wireguard.rpi {
 https://portainer.rpi {
     reverse_proxy 192.168.0.20:9000
 }
+
+https://immich.rpi {
+    reverse_proxy 192.168.0.20:2283
+}
