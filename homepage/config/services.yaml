@@ -45,6 +45,15 @@
           type: plex
           url: http://192.168.0.20:32400
           key: {{HOMEPAGE_VAR_KEY_PLEX}}
+    - Immich:
+        href: http://immich.rpi
+        description: host dem photoz
+        icon: immich.svg
+        widget:
+          type: immich
+          url: http://192.168.0.20:2283
+          key: {{HOMEPAGE_VAR_KEY_IMMICH}}
+          version: 2 # optional
 
 - IoT:
     - Home Assistant:
