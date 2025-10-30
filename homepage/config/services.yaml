@@ -46,7 +46,7 @@
           url: http://192.168.0.20:32400
           key: {{HOMEPAGE_VAR_KEY_PLEX}}
     - Immich:
-        href: http://immich.rpi
+        href: https://immich.rpi
         description: host dem photoz
         icon: immich.svg
         widget:
