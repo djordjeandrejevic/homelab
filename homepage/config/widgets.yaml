@@ -3,12 +3,45 @@
 # https://gethomepage.dev/configs/info-widgets/
 
 - resources:
+    label: System
+    expanded: true
     cpu: true
+    cputemp: true
     memory: true
+
+- resources:
+    label: Storage
+    expanded: true
     disk:
       - /
       - /hitachi
 
+- resources:
+    label: Network
+    expanded: true
+    network: true
+
+- resources:
+    label: Uptime
+    expanded: true
+    uptime: true
+
 - search:
-    provider: duckduckgo
+    provider: google
+    focus: true
     target: _blank
+
+- datetime:
+    text_size: md
+    format:
+      timeStyle: short
+      hourCycle: h23
+
+- openmeteo:
+    latitude: 44.8125
+    longitude: 20.4612
+    timezone: Europe/Belgrade
+    units: metric
+    cache: 5
+    format:
+      maximumFractionDigits: 1
