@@ -2,6 +2,7 @@ services:
   watchtower:
     image: containrrr/watchtower
     container_name: watchtower
+    restart: unless-stopped
     environment:
       - TZ=Europe/Belgrade
       - WATCHTOWER_SCHEDULE=0 0 12 * * 0
