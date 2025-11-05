@@ -50,4 +50,3 @@ networks:
     external: true
   homepage_default:
     external: true
-
