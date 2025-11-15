@@ -11,9 +11,9 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - ~/apps/qbittorrent/appdata:/config
-      - /media/rpi/hitachi/downloads:/downloads
-      - /media/rpi/hitachi/plex/movies:/movies
-      - /media/rpi/hitachi/plex/tvshows:/tvshows
+      - /mnt/hitachi/downloads:/downloads
+      - /mnt/hitachi/plex/movies:/movies
+      - /mnt/hitachi/plex/tvshows:/tvshows
     ports:
       - 8080:8080
       - 6881:6881

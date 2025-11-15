@@ -8,7 +8,7 @@ services:
     volumes:
       - ./config:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations, see alternative methods
-      - /media/rpi/hitachi:/hitachi
+      - /mnt/hitachi:/hitachi
     environment:
       HOMEPAGE_ALLOWED_HOSTS: raspberrypi.local:3000,192.168.0.20:3000,homepage.rpi # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
       PUID: $PUID

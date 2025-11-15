@@ -7,7 +7,7 @@ set -euo pipefail
 
 # === CONFIGURATION ===
 SRC_DEV="/dev/mmcblk0"
-DEST_DIR="/media/rpi/hitachi/backup"
+DEST_DIR="/mnt/hitachi/backup"
 IMG_NAME="rpi-backup-$(date +%F).img.gz"
 
 # Use the environment variable RETENTION_DAYS if it's set, otherwise default to 7.
