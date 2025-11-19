@@ -13,9 +13,10 @@ The powerhouse of this homelab is actually pretty modest.
 This makes it even more awesome as it clearly shows you don't need expensive gear to get some useful services up & running.
 
 It consists of:
-🧠 Raspberry Pi 4 (8GB RAM) → running as the main server
-💾 Kingston Canvas Go! Plus 128GB microSD card → for the OS and Docker
-🗃️ Hitachi 2.5" 500GB HDD → drive pulled from an old laptop, connected via SATA to USB 3.0 enclosure for storage
+
+🧠 Raspberry Pi 4 (8GB RAM) → running as the main server  
+💾 Kingston Canvas Go! Plus 128GB microSD card → for the OS and Docker  
+🗃️ Hitachi 2.5" 500GB HDD → drive pulled from an old laptop, connected via SATA to USB 3.0 enclosure for storage  
 
 ... and that's it!
 
