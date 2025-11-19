@@ -29,7 +29,7 @@ These are some Raspberry Pi related optimizations that are not version-controlle
 - [log2ram](https://github.com/azlux/log2ram)
   - Reduces the number of writes to the microSD card by storing logs in RAM and syncing them to disk periodically.
   - This reduces the wear and tear on the microSD card, prolonging its lifespan.
-  - When your set everything up and your microSD card fails, you'll realize how important this is.
+  - When you set everything up and your microSD card fails, you'll realize how important this is.
 - Disable display manager
   - `sudo systemctl stop display-manager`
   - This frees up some system resources since GUI is not needed 99% of the time.
