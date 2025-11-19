@@ -1,10 +1,11 @@
 # Homelab
-
 ## Overview
 
 This repository contains configuration files for setting up and managing a personal homelab environment.
 
 Everything is managed using Docker and Docker Compose for easy deployment and maintenance.
+
+<img width="1298" height="771" alt="homepage" src="https://github.com/user-attachments/assets/98830b86-a2f6-4fb2-b3f7-5f0b4d3f7ba2" />
 
 ## Hardware
 
