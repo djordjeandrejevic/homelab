@@ -10,9 +10,7 @@ SRC_DEV="/dev/mmcblk0"
 DEST_DIR="/mnt/hitachi/backup"
 IMG_NAME="rpi-backup-$(date +%F).img.gz"
 
-# Use the environment variable RETENTION_DAYS if it's set, otherwise default to 7.
-# The ${VAR:-default} syntax is used here.
-RETENTION_DAYS="${RETENTION_DAYS:-7}"
+RETENTION_DAYS=2
 
 echo "Retention set to: $RETENTION_DAYS days."
 
