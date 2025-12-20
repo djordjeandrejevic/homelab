@@ -7,6 +7,8 @@
         href: https://portainer.rpi
         description: obzerve dem containerz
         icon: portainer.svg
+        server: my-docker
+        container: portainer
         widget:
           type: portainer
           url: https://192.168.0.20:9443
@@ -19,6 +21,8 @@
         href: https://pihole.rpi/admin
         description: block dem adz
         icon: pi-hole.svg
+        server: my-docker
+        container: pihole
         widget:
           type: pihole
           url: http://pihole
@@ -28,6 +32,8 @@
         href: https://wireguard.rpi
         description: tunnel dem trafficz
         icon: wireguard.svg
+        server: my-docker
+        container: wg-easy
         widget:
           type: wgeasy
           url: http://192.168.0.20:51821
@@ -41,6 +47,8 @@
         href: https://plex.rpi
         description: watch dem moviez & tvshowz
         icon: plex.png
+        server: my-docker
+        container: plex
         widget:
           type: plex
           url: http://192.168.0.20:32400
@@ -60,12 +68,16 @@
         href: http://192.168.0.20:8123
         description: smart dem homez
         icon: home-assistant-alt.svg
+        server: my-docker
+        container: homeassistant
 
 - Download:
     - qBittorrent:
         href: https://qbittorrent.rpi
         description: download dem torrentz
         icon: qbittorrent.svg
+        server: my-docker
+        container: qbittorrent
         widget:
           type: qbittorrent
           url: http://192.168.0.20:8080
