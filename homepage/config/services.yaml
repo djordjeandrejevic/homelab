@@ -57,6 +57,8 @@
         href: https://immich.rpi
         description: host dem photoz
         icon: immich.svg
+        server: my-docker
+        container: immich_server
         widget:
           type: immich
           url: http://192.168.0.20:2283
