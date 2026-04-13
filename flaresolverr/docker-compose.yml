@@ -3,8 +3,10 @@ services:
     image: ghcr.io/flaresolverr/flaresolverr:latest
     container_name: flaresolverr
     environment:
+      - BROWSER_TIMEOUT=180000
       - LOG_LEVEL=info
       - TZ=Europe/Belgrade
+    shm_size: '2gb'
     ports:
       - 8191:8191
     restart: unless-stopped
