@@ -85,3 +85,23 @@
           url: http://192.168.0.20:8080
           username: {{HOMEPAGE_VAR_USERNAME}}
           password: {{HOMEPAGE_VAR_PASSWORD}}
+    - Radarr:
+        href: https://radarr.rpi
+        description: manage dem moviez
+        icon: radarr.svg
+        server: my-docker
+        container: radarr
+        widget:
+          type: radarr
+          url: http://192.168.0.20:7878
+          key: {{HOMEPAGE_VAR_KEY_RADARR}}
+    - Prowlarr:
+        href: https://prowlarr.rpi
+        description: manage dem trackerz
+        icon: prowlarr.svg
+        server: my-docker
+        container: prowlarr
+        widget:
+          type: prowlarr
+          url: http://192.168.0.20:9696
+          key: {{HOMEPAGE_VAR_KEY_PROWLARR}}
