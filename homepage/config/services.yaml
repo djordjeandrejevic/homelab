@@ -85,6 +85,16 @@
           url: http://192.168.0.20:8080
           username: {{HOMEPAGE_VAR_USERNAME}}
           password: {{HOMEPAGE_VAR_PASSWORD}}
+    - Seer:
+        href: https://seerr.rpi
+        description: manage dem trackerz
+        icon: seerr.svg
+        server: my-docker
+        container: seerr
+        widget:
+          type: seerr
+          url: http://192.168.0.20:5055
+          key: {{HOMEPAGE_VAR_KEY_SEERR}}
     - Radarr:
         href: https://radarr.rpi
         description: manage dem moviez

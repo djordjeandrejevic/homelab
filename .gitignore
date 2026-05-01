@@ -16,6 +16,10 @@ qbittorrent/appdata/
 # homeassistant
 homeassistant/config
 
+# seerr
+
+seerr/config
+
 # radarr
 radarr/config
 
