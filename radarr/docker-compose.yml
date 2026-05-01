@@ -8,8 +8,7 @@ services:
       - TZ=Europe/Belgrade
     volumes:
       - ~/apps/radarr/config:/config
-      - /mnt/hitachi/plex/movies:/movies
-      - /mnt/hitachi/plex/downloads:/downloads
+      - /mnt/hitachi:/data
     ports:
       - 7878:7878
     restart: unless-stopped
