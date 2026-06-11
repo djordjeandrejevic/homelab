@@ -9,5 +9,5 @@ services:
     ports:
       - 445:445
     volumes:
-      - /mnt/hitachi/samba:/storage
+      - /mnt/wd/samba:/storage
     restart: always

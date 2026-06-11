@@ -8,7 +8,7 @@ services:
       - TZ=Europe/Belgrade
     volumes:
       - ~/apps/radarr/config:/config
-      - /mnt/hitachi:/data
+      - /mnt/wd:/data
     ports:
       - 7878:7878
     restart: unless-stopped

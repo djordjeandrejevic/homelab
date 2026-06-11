@@ -11,7 +11,7 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - ~/apps/qbittorrent/appdata:/config
-      - /mnt/hitachi:/data
+      - /mnt/wd:/data
     ports:
       - 8080:8080
       - 6881:6881

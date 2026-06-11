@@ -12,6 +12,6 @@ services:
       - PLEX_CLAIM= #optional
     volumes:
       - ~/apps/plex/library:/config
-      - /mnt/hitachi/plex/movies:/movies
-      - /mnt/hitachi/plex/tvshows:/tv
+      - /mnt/wd/plex/movies:/movies
+      - /mnt/wd/plex/tvshows:/tv
     restart: unless-stopped

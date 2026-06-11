@@ -7,10 +7,10 @@ set -euo pipefail
 
 # === CONFIGURATION ===
 SRC_DEV="/dev/mmcblk0"
-DEST_DIR="/mnt/hitachi/backup"
+DEST_DIR="/mnt/wd/backup"
 IMG_NAME="rpi-backup-$(date +%F).img.gz"
 
-RETENTION_DAYS=2
+RETENTION_DAYS=1
 
 echo "Retention set to: $RETENTION_DAYS days."
 
