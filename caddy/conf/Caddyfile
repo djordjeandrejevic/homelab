@@ -38,6 +38,10 @@ https://radarr.rpi {
     reverse_proxy 192.168.0.20:7878
 }
 
+https://sonarr.rpi {
+    reverse_proxy 192.168.0.20:8989
+}
+
 https://prowlarr.rpi {
     reverse_proxy 192.168.0.20:9696
 }

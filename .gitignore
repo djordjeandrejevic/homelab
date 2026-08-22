@@ -17,11 +17,13 @@ qbittorrent/appdata/
 homeassistant/config
 
 # seerr
-
 seerr/config
 
 # radarr
 radarr/config
+
+# sonarr
+sonarr/config
 
 # prowlarr
 prowlarr/config

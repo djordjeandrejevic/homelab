@@ -105,6 +105,16 @@
           type: radarr
           url: http://192.168.0.20:7878
           key: {{HOMEPAGE_VAR_KEY_RADARR}}
+    - Sonarr:
+        href: https://sonarr.rpi
+        description: manage dem tvshowz
+        icon: sonarr.svg
+        server: my-docker
+        container: sonarr
+        widget:
+          type: sonarr
+          url: http://192.168.0.20:8989
+          key: {{HOMEPAGE_VAR_KEY_SONARR}}
     - Prowlarr:
         href: https://prowlarr.rpi
         description: manage dem trackerz
