@@ -16,7 +16,7 @@ echo "Retention set to: $RETENTION_DAYS days."
 
 # === CREATE BACKUP ===
 echo "[$(date)] Starting backup..."
-dd if="$SRC_DEV" bs=4M status=progress | gzip > "${DEST_DIR}/${IMG_NAME}"
+dd if="$SRC_DEV" bs=4M | gzip > "${DEST_DIR}/${IMG_NAME}"
 echo "[$(date)] Backup complete: ${DEST_DIR}/${IMG_NAME}"
 
 # === CLEAN OLD BACKUPS ===

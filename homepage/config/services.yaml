@@ -107,7 +107,7 @@
           key: {{HOMEPAGE_VAR_KEY_RADARR}}
     - Sonarr:
         href: https://sonarr.rpi
-        description: manage dem tvshowz
+        description: manage dem tv showz
         icon: sonarr.svg
         server: my-docker
         container: sonarr
