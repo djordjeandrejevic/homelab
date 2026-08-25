@@ -1,0 +1,135 @@
+endpoints:
+  - name: Gateway / Router
+    group: Network
+    url: "icmp://192.168.0.1"
+    interval: 30s
+    conditions:
+      - "[CONNECTED] == true"
+
+  # - name: Pi-hole DNS
+  #   group: Network
+  #   url: "dns://192.168.0.20:53/google.com"
+  #   interval: 30s
+  #   conditions:
+  #     - "[DNS_RCODE] == NOERROR"
+  
+  - name: Caddy Reverse Proxy
+    group: Core Infrastructure
+    url: "http://192.168.0.20:80"
+    interval: 30s
+    conditions:
+      - "[STATUS] < 500" # Should respond without 5xx server errors
+
+  - name: Pi-hole DNS Resolution
+    group: Core Infrastructure
+    url: "dns://192.168.0.9"
+    interval: 30s
+    dns:
+      query-name: "google.com"
+      query-type: "A"
+    conditions:
+      - "[DNS_RCODE] == NOERROR"
+
+  - name: Pi-hole Web Admin
+    group: Core Infrastructure
+    url: "http://192.168.0.20/admin/index.php"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: WireGuard Easy (wg-easy)
+    group: Core Infrastructure
+    url: "http://192.168.0.20:51821"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Authelia Auth
+    group: Core Infrastructure
+    url: "http://192.168.0.20:9091/api/health"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  # ==========================================
+  # DASHBOARD & HOME AUTOMATION
+  # ==========================================
+  - name: Homepage Dashboard
+    group: Management
+    url: "http://192.168.0.20:3000"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Home Assistant
+    group: Automation
+    url: "http://192.168.0.20:8123"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 1000"
+
+  # ==========================================
+  # MEDIA & PHOTOS
+  # ==========================================
+  - name: Immich Photo Server
+    group: Media & Storage
+    url: "http://192.168.0.20:2283/api/server/ping"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+      - "[BODY] == *res*"
+
+  - name: Plex Media Server
+    group: Media & Storage
+    url: "http://192.168.0.20:32400/identity"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+      - "[BODY] == *claimed*"
+
+  - name: Jellyseerr / Overseerr
+    group: Media & Storage
+    url: "http://192.168.0.20:5055/api/v1/status"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  # ==========================================
+  # ARR STACK & DOWNLOADS
+  # ==========================================
+  - name: qBittorrent WebUI
+    group: Downloads & Arr Stack
+    url: "http://192.168.0.20:8080"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Radarr
+    group: Downloads & Arr Stack
+    url: "http://192.168.0.20:7878/ping"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Sonarr
+    group: Downloads & Arr Stack
+    url: "http://192.168.0.20:8989/ping"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Prowlarr
+    group: Downloads & Arr Stack
+    url: "http://192.168.0.20:9696/ping"
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Flaresolverr
+    group: Downloads & Arr Stack
+    url: "http://192.168.0.20:8191"
+    interval: 2m
+    conditions:
+      - "[STATUS] == 200"
+      - "[BODY] == *FlareSolverr*"
