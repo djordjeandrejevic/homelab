@@ -2,7 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- Containers:
+- Containers & Monitoring:
     - Portainer:
         href: https://portainer.rpi
         description: obzerve dem containerz
@@ -15,6 +15,12 @@
           env: 3
           kubernetes: false
           key: {{HOMEPAGE_VAR_KEY_PORTAINER}}
+    - Dozzle:
+        href: https://dozzle.rpi
+        description: readz dem logz
+        icon: dozzle.svg
+        server: my-docker
+        container: dozzle
 
 - Network:
     - Pi-Hole:

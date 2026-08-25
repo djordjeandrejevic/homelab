@@ -49,3 +49,7 @@ https://prowlarr.rpi {
 https://flaresolverr.rpi {
     reverse_proxy 192.168.0.20:8191
 }
+
+https://dozzle.rpi {
+    reverse_proxy 192.168.0.20:8889
+}
