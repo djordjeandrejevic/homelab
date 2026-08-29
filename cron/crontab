@@ -1,0 +1,8 @@
+# /etc/cron.d/crontab
+# m h  dom mon dow   user   command
+
+0 3 * * *            root   /home/rpi/apps/backup/backup.sh > /var/log/backup.log 2>&1
+
+*/5 * * * *          rpi    /home/rpi/apps/duckdns/duck.sh >/dev/null 2>&1
+0 2 * * *            rpi    docker start qbittorrent
+0 8 * * *            rpi    docker stop qbittorrent
